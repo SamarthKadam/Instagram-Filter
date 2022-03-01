@@ -1,8 +1,12 @@
 html{
-    background-color: #1E1E1E;
+    background-color: #1b1b1b;
+    font-size: 16px;
 }
 body{
+    height: 100vh;
+    overflow: hidden;
     margin: 0%;
+    user-select: none;
 }
 .HomePage{
     margin: 0%;
@@ -60,3 +64,47 @@ body{
   .hidden{
       display: none;
   }
+.adjust{
+    cursor: pointer;
+    /* height: 40px; */
+    height: 1.8em;
+    border-radius: .5em;
+    border: solid 2px white;
+}
+.light{
+    color: rgba(170, 170, 170, 0.637);
+}
+.imgPic{
+    position: relative;
+}
+.row{
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.adjusticon{
+    height: 2.2em;
+}
+@media (max-width:440px) 
+{
+    html{
+        font-size: 15px;
+    }
+    .reels{
+        margin-left: 1em;
+    }
+
+}
+@media (max-width:403px) 
+{
+    html{
+        font-size: 13px;
+    }
+    .reels{
+        margin-left: .2em;
+    }
+
+}
