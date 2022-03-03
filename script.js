@@ -89,16 +89,3 @@ const Addfilters=()=>
 
 
 
-
-// if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia)
-// {
-//     console.log(navigator.mediaDevices.getUserMedia({video:true}));
-//     navigator.mediaDevices.getUserMedia({video:true}).then((data)=>{
-//         console.log(navigator.mediaDevices.getUserMedia({video:true}));
-//         Starttimming();
-//     });
-// }
-// else{
-//     alert("Please allow Devices access");
-// }
-
