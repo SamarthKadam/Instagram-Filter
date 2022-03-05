@@ -1,58 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="Reel.css">
-    <link rel="stylesheet" href="Filter.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Reel.css" />
+    <link rel="stylesheet" href="Filter.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="HomePage">
-            <img class="logo-png" src="./Asset/logo-ig-png-32464.png" alt="">
-            <img class="logotext-png" src="./Asset/instagram_wordmark_logo_icon_169660.png" alt="">
-            <div class="spinner"></div>
+      <img class="logo-png" src="./Asset/logo-ig-png-32464.png" alt="" />
+      <img
+        class="logotext-png"
+        src="./Asset/instagram_wordmark_logo_icon_169660.png"
+        alt=""
+      />
+      <div class="spinner"></div>
     </div>
     <div class="ReelPage hidden">
-        <div class="Videopage">
-            <div class="leftblock"></div>
-            <div class="FilterBlockScope">
-                <!-- Example Considering one of the filter -->
-                <div class="ParentFilter">
-                    <div class="quetion">WHERE IS YOUR SOUL MATE?<div class="arrow-left"></div></div>
-                    <div class="answer"><div class="arrow-right"></div> <img src="/Asset/outline_location_on_white_24dp.png" alt="">North Korea</div>
-                </div>
-                
+      <div class="Videopage">
+        <div class="leftblock"></div>
+        <div class="FilterBlockScope hidden">
+          <!-- Example Considering one of the filter -->
+          <div class="ParentFilter">
+            <div class="quetion">
+              WHERE IS YOUR SOUL MATE?
+              <div class="arrow-left"></div>
             </div>
-            <div class="rightblock" ></div>
-            <div class="topblock">
-                <img class="adjusticon" src="/Asset/outline_settings_white_24dp.png" alt="">
-                <img class="adjusticon" src="/Asset/outline_flash_on_white_24dp.png" alt="">
-                <img class="adjusticon" src="/Asset/outline_close_white_24dp.png" alt="">
+            <div class="answer">
+              <div class="arrow-right"></div>
+              <img
+                src="/Asset/outline_location_on_white_24dp.png"
+                alt=""
+              />North Korea
             </div>
-         <div class="bottomblock">
-             <div class="row">
-              <div class="imgPic"><img class="adjust backGr" src="https://www.itl.cat/pngfile/big/99-992191_wallpaper-linear-gradient-green-blue-spring-green-dark.jpg" alt="">
-            <div class="plus"><span class="plussign">+</span></div>
-            </div>
-                <div class="headeradjust">
-                <div class="story">REELS</div>
-                <div class="reels light">STORY</div>
-                   </div>
-                <div class="icon"><img src="./Asset/outline_flip_camera_ios_white_36dp.png" alt=""></div>
-            </div>
+          </div>
         </div>
-            <video id="videoPlayer" src="video"></video>
-            <div class="filterflow">
-               <div class="filter">
-                   <div data-indexnumber="1" class="reelbutton button1"><img class="reel-button-icon" src="https://minter.io/blog/content/images/2020/08/reels.jpg" alt=""></div>
-                   <div data-indexnumber="2"  class="reelbutton button2 sidemar"><img class="reel-button-icon" src="/Asset/milad-fakurian-nY14Fs8pxT8-unsplash.jpg" alt=""></div>
-               </div>
-            </div>
+        <div class="rightblock"></div>
+        <div class="topblock">
+          <img
+            class="adjusticon"
+            src="/Asset/outline_settings_white_24dp.png"
+            alt=""
+          />
+          <img
+            class="adjusticon"
+            src="/Asset/outline_flash_on_white_24dp.png"
+            alt=""
+          />
+          <img
+            class="adjusticon"
+            src="/Asset/outline_close_white_24dp.png"
+            alt=""
+          />
         </div>
+        <div class="bottomblock">
+          <div class="row">
+            <div class="imgPic">
+              <img
+                class="adjust backGr"
+                src="https://www.itl.cat/pngfile/big/99-992191_wallpaper-linear-gradient-green-blue-spring-green-dark.jpg"
+                alt=""
+              />
+              <div class="plus"><span class="plussign">+</span></div>
+            </div>
+            <div class="headeradjust">
+              <div class="story">REELS</div>
+              <div class="reels light">PAGE</div>
+            </div>
+            <div class="icon">
+              <img
+                src="./Asset/outline_flip_camera_ios_white_36dp.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <video id="videoPlayer" src="video"></video>
+        <div class="filterflow">
+          <div class="filter">
+            <div data-indexnumber="1" class="reelbutton button1">
+              <img
+                class="reel-button-icon"
+                src="https://minter.io/blog/content/images/2020/08/reels.jpg"
+                alt=""
+              />
+            </div>
+            <div data-indexnumber="2" class="reelbutton button2 sidemar">
+              <img
+                class="reel-button-icon"
+                src="/Asset/milad-fakurian-nY14Fs8pxT8-unsplash.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
