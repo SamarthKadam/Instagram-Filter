@@ -53,16 +53,27 @@ class App {
     ];
     if (val == 1) {
       let trash=0;
+      let count=0;
       console.log(trash);
       let countries=['Tokyo','London','New York','Paris','Beijing','Shanghai','Los Angeles','Madrid','Barcelona','Chicago','Amsterdam','Bangkok','Sydney','Melboune','Moscow','Mexico City','Mumbai','Berlin','Lisbon','Denmark','Sweden','Ukraine'];
       this._insertInsideElement(filters[val-1],PFilters);
       FilterCover.classList.remove("hidden");
       ReelAnswers=document.querySelector('.ReelAnswer');
      this.timerfilter=setInterval(() => {
+       console.log(count);
+       if(count===90)
+       {
+         let answerbackground=document.querySelector('.answer');
+         let arrowright=document.querySelector('.arrow-right');
+         answerbackground.style.backgroundColor = "#FF5733";
+         arrowright.style.borderLeft="10px solid #FF5733";
+         clearInterval(this.timerfilter);
+       }
         trash=trash%19;
         console.log(trash,ReelAnswers);;
         ReelAnswers.innerHTML=countries[trash];
         trash=trash+1;
+        count++;
       },100);
     }
   }
