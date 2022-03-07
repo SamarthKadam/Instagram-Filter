@@ -50,6 +50,8 @@ class App {
       alt=""
     /><span class="ReelAnswer">North Korea</span>
   </div>`,
+ `<div class="question-die-reel">This filter tells what age you will die</div>
+  <div class="answer-die-reel">6</div>`
     ];
     if (val == 1) {
       let trash=0;
@@ -76,6 +78,31 @@ class App {
         count++;
       },100);
     }
+    if(val==2)
+  {
+    let count=0;
+    this._insertInsideElement(filters[val-1],PFilters);
+    let answerdeath=document.querySelector('.answer-die-reel');
+    FilterCover.classList.remove('hidden');
+    this.timerfilter=setInterval(() => {
+      let random=Math.ceil(Math.random()*100)+1;
+      answerdeath.innerHTML=random;
+      count++;
+      if(count===70)
+      {
+        clearInterval(this.timerfilter);
+        if(random<=50)
+        {
+          answerdeath.style.color='#C3272B';
+        }
+        if(random>50)
+        {
+          answerdeath.style.color='#26C281';
+        }
+        return;
+      }
+    },100);
+  }
   }
   _startWaitTimer() {
     setTimeout(() => {
