@@ -51,7 +51,12 @@ class App {
     /><span class="ReelAnswer">North Korea</span>
   </div>`,
  `<div class="question-die-reel">This filter tells what age you will die</div>
-  <div class="answer-die-reel">6</div>`
+  <div class="answer-die-reel">6</div>`,
+  ` <div class="quetion-reel-3">
+  What emoji are you
+  <img src="/Asset/emojis/emoji-10.png" class="emoji-Adjust Emoji" alt="">
+  <div class="indicatediv"></div>
+</div>`
     ];
     if (val == 1) {
       let trash=0;
@@ -64,7 +69,7 @@ class App {
        if(count===70)
        {
          let randomnum=Math.ceil(Math.random()*countries.length);
-         ReelAnswers.innerHTML=countries[randomnum];
+         ReelAnswers.innerHTML=countries[randomnum-1];
          let answerbackground=document.querySelector('.answer');
          let arrowright=document.querySelector('.arrow-right');
          answerbackground.style.backgroundColor = "#FF5733";
@@ -103,6 +108,26 @@ class App {
       }
     },100);
   }
+  if(val==3)
+  {
+    let count=0;
+    let images=16;
+    this._insertInsideElement(filters[val-1],PFilters);
+    let emojiimg=document.querySelector('.Emoji');
+    FilterCover.classList.remove('hidden');
+    this.timerfilter=setInterval(() => {
+      emojiimg.src=`/Asset/emojis/emoji-${(count+1)%images}.png`
+      count++;
+      if(count===80)
+      {
+        let mathrandom=Math.ceil(Math.random()*16);
+        emojiimg.src=`/Asset/emojis/emoji-${mathrandom-1}.png`;
+        clearInterval(this.timerfilter);
+      }
+    }, 100);
+
+  }
+
   }
   _startWaitTimer() {
     setTimeout(() => {
@@ -125,7 +150,6 @@ class App {
       this._ClearInDiv(PFilters);
       item.classList.remove("movingAnimation");
       clearInterval(this.timerfilter);
-      console.log(`${item} should remove its functionality`);
     }
 
     function mouseleaving (item) {
@@ -136,7 +160,6 @@ class App {
 
     let item = e.target.closest(".reelbutton");
     this._CurrentActiveFilter(item.dataset.indexnumber);
-    console.log(item.dataset.indexnumber);
     mouseDown(item);
     item.addEventListener("mouseup",mouseUp.bind(this,item));
     item.addEventListener("mouseleave",mouseleaving.bind(this,item));
