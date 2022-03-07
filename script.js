@@ -206,19 +206,6 @@ const Insta = new App();
 //     },2000)
 // }
 
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-=======
 // const isit=new Promise((resolve,reject)=>{
 //     resolve(navigator.mediaDevices.getUserMedia({video:true}));
 // })
@@ -268,4 +255,3 @@ const Insta = new App();
 // {
 //     console.log("Added the Filters to be added");
 // }
->>>>>>> modify
