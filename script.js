@@ -146,7 +146,6 @@ class App {
 
     function mouseUp(item) {
       FilterCover.classList.add("hidden");
-      console.error(this,item);
       this._ClearInDiv(PFilters);
       item.classList.remove("movingAnimation");
       clearInterval(this.timerfilter);
@@ -159,6 +158,10 @@ class App {
     }
 
     let item = e.target.closest(".reelbutton");
+    if(!item)
+    {
+      return;
+    }
     this._CurrentActiveFilter(item.dataset.indexnumber);
     mouseDown(item);
     item.addEventListener("mouseup",mouseUp.bind(this,item));
