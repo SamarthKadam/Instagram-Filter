@@ -5,6 +5,7 @@ html{
 }
 body{
     height: 100vh;
+    position: relative;
     overflow: hidden;
     margin: 0%;
     user-select: none;
@@ -108,4 +109,26 @@ body{
         margin-left: .2em;
     }
 
+}
+.Instagram-Page{
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+.translatex{
+    animation-name: movex;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes movex{
+    from{
+
+    }
+    to{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
 }

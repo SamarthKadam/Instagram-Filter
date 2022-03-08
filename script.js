@@ -10,6 +10,9 @@ const allfilters = document.querySelector(".filter");
 const iconflip = document.querySelector(".icon");
 const FilterCover = document.querySelector(".FilterBlockScope");
 const PFilters=document.querySelector('.ParentFilter');
+const Toreels=document.querySelector('.reels');
+const ReelSection=document.querySelector('.ReelPage');
+const InstPage=document.querySelector('.Instagram-Page');
 let ReelAnswers;
 
 let linearGrad = [
@@ -23,6 +26,17 @@ class App {
     this._getReuqestfromMedia();
     iconflip.addEventListener("click", this._CamNot);
     allfilters.addEventListener("mousedown", this._startfilter.bind(this));
+    Toreels.addEventListener('click',this._shifttoPage)
+  }
+  _shifttoPage()
+  {
+    ReelSection.classList.add('translatex');
+   setTimeout(() => {
+     console.log(ReelSection);
+      // ReelSection.classList.add('hidden');
+      ReelSection.style.display='none';
+      InstPage.classList.remove('hidden');
+    }, 1000);
   }
 
   _CamNot() {
