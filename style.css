@@ -132,3 +132,199 @@ body{
         opacity: 0;
     }
 }
+.Instagram-Page-Header{
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: solid .1px rgb(168, 168, 168);
+}
+.Items-Pngs{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.text-size{
+    height: 3.5em;
+}
+.inputtext{
+    height: 2em;
+    width: 120%;
+    background-color: #EFEFEF;
+    border-radius: .5em;
+    border: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 5px 5px 5px 35px;
+    outline: none;
+    font-size: 16px;
+}
+.searchbar{
+    position: relative;
+}
+.set{
+    position: absolute;
+    top: 19%;
+    left: 2%;
+}
+.instagram-icons{
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    align-items: center;
+}
+.iconadjust{
+    height: 1.8em;
+    cursor: pointer;
+}
+.sendParent,.homParent{
+    position: relative;
+}
+.message{
+    background-color: #ED4956;
+    height: 1.3em;
+    width: 1.3em;
+    position: absolute;
+    top: -25%;
+    color: whitesmoke;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    left: 59%;
+    border-radius: 50%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.activedot{
+    position: absolute;
+    top: 100%;
+    left: 47%;
+    background-color: #ED4956;
+    height: .3em;
+    width: .3em;
+    border-radius: 50%;
+}
+.actualContent{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.Hadjust{
+    height:565px;
+}
+.videoContainer{
+    position: relative;
+}
+.topVideoSection{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 100;
+    padding: .5em .5em;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.055);
+    align-items: center;
+}
+.InstIcon{
+    height: 1.5em;
+}
+.actualContent{
+    position: relative;
+    height: 100%;
+    widows: 100%;
+}
+.reeltext{
+    font-size: 22px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    margin-left: 1em;
+    font-weight: 600;
+}
+.feedbacksystem{
+    position: absolute;
+    top: 58%;
+    left: 87%;
+    display: flex;
+    gap: .8em;
+    flex-flow: column;
+}
+.feedbackAdjust{
+    height: 1.6em;
+    width: 1.6em;
+}
+.SepAdjust{
+    height: 2em;
+}
+.likes,.comments,.send,.moreoption{
+    display: flex;
+    flex-flow: column;
+}
+.numberRep{
+    color: white;
+    margin-top: .1em;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.videoDetails{
+    position: absolute;
+    top: 75.5%;
+    height: 14%;
+    padding-left: 1em;
+    width: 80%;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-flow: column;
+    gap: .5em;
+}
+.topDetailing,.middleDetailing,.bottomdetailing{
+    display: flex;
+}
+.topDetailing{
+    /* padding-left: 1em; */
+    align-items: center;
+}
+.pictitle{
+    height: 1.8em;
+    width: 1.8em;
+    background-color: grey;
+    border-radius: 50%;
+}
+.titleVideo,.followbutton{
+    font-size: 16px;
+    font-weight: 600;
+    color: whitesmoke;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.titleVideo{
+    margin-left: .4em;
+}
+.followbutton{
+    margin-left: .4em;
+    padding: .2em .2em;
+    box-sizing: border-box;
+    border: solid 1px whitesmoke;
+    border-radius: .2em;
+    /* font-weight: 600; */
+}
+.middleDetailing{
+    font-size: 13px;
+    color: whitesmoke;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.Musical-Note{
+    height: .7em;
+    width: .7em;
+}
+.Song-Name{
+    font-size: 13px;
+    margin-left: .4em;
+    color: whitesmoke;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.bottomdetailing{
+    display: flex;
+    align-items: center;
+}
