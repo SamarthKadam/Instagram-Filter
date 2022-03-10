@@ -14,6 +14,35 @@ const Toreels=document.querySelector('.reels');
 const ReelSection=document.querySelector('.ReelPage');
 const InstPage=document.querySelector('.Instagram-Page');
 let ReelAnswers;
+let instagramFiltersContent=[{
+  link:'/Asset/Reel/273470311_678773606827659_2545209592104638155_n.mp4',
+  channelName:'japan_.carss',
+  likes:'277K',
+  comments:'1058',
+  middlesection:'R34 or R35? 😍',
+  song:'japan_carss .Orignal Audio'
+},{
+  link:'/Asset/Reel/272906367_471067674682932_5387380735934833246_n.mp4',
+  channelName:'carlee.horton',
+  likes:'27K',
+  comments:'108',
+  middlesection:'January 🎞',
+  song:'Suffer with me Sandiego'
+},{
+  link:'/Asset/Reel/273884287_1162311734577078_3652211896240796441_n.mp4',
+  channelName:'murbanvideo',
+  likes:'36.6K',
+  comments:'98',
+  middlesection:'Which is your favourite? Filmed in SLOG-3 ..',
+  song:'omura Nolanomura',
+},{
+  link:'/Asset/Reel/274006084_161179402932069_5607339682707444194_n.mp4',
+  channelName:'mrexpress_r6',
+  likes:'105K',
+  comments:'106',
+  middlesection:'⚡⚡⚡ ....',
+  song:'omura Nolanomura',
+}];
 
 let linearGrad = [
   "https://www.itl.cat/pngfile/big/99-992191_wallpaper-linear-gradient-green-blue-spring-green-dark.jpg",
@@ -208,3 +237,27 @@ class App {
 }
 
 const Insta = new App();
+
+// let check=2;
+// let song=document.querySelector('.Hadjust');
+// const heart=document.querySelector('.heart');
+// heart.addEventListener('click',function(){
+//   console.log("Is this clicked");
+//   heart.src=`/Asset/Icons/heart(${check}).png`;
+//   console.log(heart)
+//   check=check===2?1:2;
+// })
+
+
+// window.addEventListener('keydown',function(e){
+  
+//   console.log(e.key);
+//   if(e.key=='ArrowUp')
+//   {
+//     console.log("ARrow is up");
+//   }
+//   if(e.key=='ArrowDown')
+//   {
+//     console.log("arrow is down");
+//   }
+// })
