@@ -54,7 +54,7 @@ let linearGrad = [
 class App {
   timerfilter;
   constructor() {
-    this._getReuqestfromMedia();
+    this._getReuqestfromMedia(0);
     iconflip.addEventListener("click", this._CamNot);
     allfilters.addEventListener("mousedown", this._startfilter.bind(this));
     Toreels.addEventListener('click',this._shifttoPage);
@@ -66,6 +66,7 @@ class App {
     let down=document.querySelector('.actualContent');
     up.classList.add('newtranslate');
     down.classList.add('newtranslate');
+    this._getReuqestfromMedia(1);
     // InstPage.classList.add('newtranslate');
     setTimeout(() => {
       // tracks[0].start();
@@ -74,7 +75,6 @@ class App {
       down.classList.remove('newtranslate');
       InstPage.style.display='none';
       ReelSection.style.display='flex';
-      Video.play();
 
     },1000);
   }
@@ -83,8 +83,7 @@ class App {
     ReelSection.classList.add('translatex');
    setTimeout(() => {
      console.log(tracks);
-    //  tracks[0].stop();
-     Video.pause();
+     tracks[0].stop();
       // ReelSection.classList.add('hidden');
       ReelSection.classList.remove('translatex');
       ReelSection.style.display='none';
@@ -197,7 +196,11 @@ class App {
   }
 
   }
-  _startWaitTimer() {
+  _startWaitTimer(cani) {
+    if(cani==1)
+    {
+      return;
+    }
     setTimeout(() => {
       Start.classList.add("hidden");
       ReelPage.classList.remove("hidden");
@@ -236,18 +239,18 @@ class App {
     item.addEventListener("mouseleave",mouseleaving.bind(this,item));
   }
 
-  _getReuqestfromMedia() {
+  _getReuqestfromMedia(cani) {
     const isit = new Promise((resolve, reject) => {
       resolve(navigator.mediaDevices.getUserMedia({ video: true }));
     });
 
-    this._ContinueData(isit);
+    this._ContinueData(isit,cani);
   }
 
-  async _ContinueData(isit) {
+  async _ContinueData(isit,cani) {
     isit
       .then((data) => {
-        this._startWaitTimer();
+        this._startWaitTimer(cani);
         Video.srcObject = data;
         const mediastream=Video.srcObject;
         tracks=mediastream.getTracks(); 
