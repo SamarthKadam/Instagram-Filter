@@ -13,10 +13,17 @@ const PFilters=document.querySelector('.ParentFilter');
 const Toreels=document.querySelector('.reels');
 const ReelSection=document.querySelector('.ReelPage');
 const InstPage=document.querySelector('.Instagram-Page');
-const backbutton=document.querySelector('.InstIcon');
+// const backbutton=document.querySelector('.InstIcon');
 let ReelAnswers;
 let tracks=[];
 let instagramFiltersContent=[{
+  link:'/Asset/Reel/273884287_1162311734577078_3652211896240796441_n.mp4',
+  channelName:'murbanvideo',
+  likes:'36.6K',
+  comments:'98',
+  middlesection:'Which is your favourite? Filmed in SLOG-3 ..',
+  song:'omura Nolanomura',
+},{
   link:'/Asset/Reel/273470311_678773606827659_2545209592104638155_n.mp4',
   channelName:'japan_.carss',
   likes:'277K',
@@ -30,13 +37,6 @@ let instagramFiltersContent=[{
   comments:'108',
   middlesection:'January 🎞',
   song:'Suffer with me Sandiego'
-},{
-  link:'/Asset/Reel/273884287_1162311734577078_3652211896240796441_n.mp4',
-  channelName:'murbanvideo',
-  likes:'36.6K',
-  comments:'98',
-  middlesection:'Which is your favourite? Filmed in SLOG-3 ..',
-  song:'omura Nolanomura',
 },{
   link:'/Asset/Reel/274006084_161179402932069_5607339682707444194_n.mp4',
   channelName:'mrexpress_r6',
@@ -57,11 +57,12 @@ class App {
     this._getReuqestfromMedia(0);
     iconflip.addEventListener("click", this._CamNot);
     allfilters.addEventListener("mousedown", this._startfilter.bind(this));
-    Toreels.addEventListener('click',this._shifttoPage);
-    backbutton.addEventListener('click',this._shiftBack.bind(this));
+    Toreels.addEventListener('click',this._shifttoPage.bind(this));
+    // backbutton.addEventListener('click',this._shiftBack.bind(this));
   }
   _shiftBack()
   {
+    document.querySelector('body').style.overflow='hidden';
     let up=document.querySelector('.Instagram-Page-Header')
     let down=document.querySelector('.actualContent');
     up.classList.add('newtranslate');
@@ -80,6 +81,7 @@ class App {
   }
   _shifttoPage()
   {
+    document.querySelector('body').style.overflow='auto';
     ReelSection.classList.add('translatex');
    setTimeout(() => {
      console.log(tracks);
@@ -89,7 +91,76 @@ class App {
       ReelSection.style.display='none';
       InstPage.classList.remove('hidden');
       InstPage.style.display='initial';
+      this._setupInstagramPage();
+      let backbutton=document.querySelector('.InstIcon');
+      backbutton.addEventListener('click',this._shiftBack.bind(this));
+      this._likebutton();
     }, 1000);
+  }
+  _likebutton()
+  {
+    let check=2;
+let song=document.querySelector('.Hadjust');
+const heart=document.querySelector('.heart');
+heart.addEventListener('click',function(){
+  console.log("Is this clicked");
+  heart.src=`/Asset/Icons/heart(${check}).png`;
+  console.log(heart)
+  check=check===2?1:2;
+  })
+}
+
+  _setupInstagramPage()
+  {
+    // InstPage.innerHTML='';
+    let InstPageinside=document.querySelector('.nextpart');
+    InstPageinside.innerHTML='';
+    instagramFiltersContent.forEach((data)=>{
+      console.log(data);
+      let html=`
+  <section class="actualContent">
+    <div class="videoContainer">
+      <div class="topVideoSection">
+        <img class="InstIcon" src="/Asset/Icons/back.png" alt="">
+        <div class="reeltext">Reels</div>
+      </div>
+      <div class="feedbacksystem">
+        <div class="likes">
+          <img class="feedbackAdjust heart" src="/Asset/Icons/heart(1).png" alt="">
+          <span class="numberRep">${data.likes}</span>
+        </div>
+        <div class="comments">
+          <img class="feedbackAdjust" src="/Asset/Icons/chat.png" alt="">
+          <span class="numberRep">${data.comments}</span>
+        </div>
+        <div class="send">
+          <img class="feedbackAdjust" src="/Asset/Icons/send (1).png" alt="">
+        </div>
+        <div class="moreoption">
+          <img class="SepAdjust" src="/Asset/Icons/three-dots.png" alt="">
+        </div>
+      </div>
+      <video   loop class="Hadjust">
+      <source  type="video/mp4" src="${data.link}">
+      </video>
+      <div class="videoDetails">
+        <div class="topDetailing">
+          <div class="pictitle"></div>
+          <div class="titleVideo">${data.channelName}</div>
+          <div class="followbutton">Follow</div>
+        </div>
+        <div class="middleDetailing">${data.middlesection}</div>
+        <div class="bottomdetailing"><img class="Musical-Note" src="/Asset/Icons/musical-note.png" alt="">
+          <div class="Song-Name">
+           <div class="MoveText-1">${data.song}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>`;
+  InstPageinside.insertAdjacentHTML('beforeend',html);
+    })
+
   }
 
   _CamNot() {
