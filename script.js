@@ -2,7 +2,7 @@
 const Start = document.querySelector(".HomePage");
 const spinner = document.querySelector(".spinner");
 const ReelPage = document.querySelector(".ReelPage");
-const Video = document.querySelector("#videoPlayer");
+let Video = document.querySelector("#videoPlayer");
 const stor = document.querySelector(".story");
 const images = document.querySelector(".backGr");
 const reelbutton = document.querySelector(".button1");
@@ -13,7 +13,9 @@ const PFilters=document.querySelector('.ParentFilter');
 const Toreels=document.querySelector('.reels');
 const ReelSection=document.querySelector('.ReelPage');
 const InstPage=document.querySelector('.Instagram-Page');
+const backbutton=document.querySelector('.InstIcon');
 let ReelAnswers;
+let tracks=[];
 let instagramFiltersContent=[{
   link:'/Asset/Reel/273470311_678773606827659_2545209592104638155_n.mp4',
   channelName:'japan_.carss',
@@ -55,16 +57,39 @@ class App {
     this._getReuqestfromMedia();
     iconflip.addEventListener("click", this._CamNot);
     allfilters.addEventListener("mousedown", this._startfilter.bind(this));
-    Toreels.addEventListener('click',this._shifttoPage)
+    Toreels.addEventListener('click',this._shifttoPage);
+    backbutton.addEventListener('click',this._shiftBack.bind(this));
+  }
+  _shiftBack()
+  {
+    let up=document.querySelector('.Instagram-Page-Header')
+    let down=document.querySelector('.actualContent');
+    up.classList.add('newtranslate');
+    down.classList.add('newtranslate');
+    // InstPage.classList.add('newtranslate');
+    setTimeout(() => {
+      // tracks[0].start();
+      // InstPage.classList.remove('newtranslate');
+      up.classList.remove('newtranslate');
+      down.classList.remove('newtranslate');
+      InstPage.style.display='none';
+      ReelSection.style.display='flex';
+      Video.play();
+
+    },1000);
   }
   _shifttoPage()
   {
     ReelSection.classList.add('translatex');
    setTimeout(() => {
-     console.log(ReelSection);
+     console.log(tracks);
+    //  tracks[0].stop();
+     Video.pause();
       // ReelSection.classList.add('hidden');
+      ReelSection.classList.remove('translatex');
       ReelSection.style.display='none';
       InstPage.classList.remove('hidden');
+      InstPage.style.display='initial';
     }, 1000);
   }
 
@@ -224,6 +249,8 @@ class App {
       .then((data) => {
         this._startWaitTimer();
         Video.srcObject = data;
+        const mediastream=Video.srcObject;
+        tracks=mediastream.getTracks(); 
         Video.play();
         let random = Math.trunc(Math.random() * 2);
         images.src = linearGrad[random];
@@ -249,15 +276,4 @@ const Insta = new App();
 // })
 
 
-// window.addEventListener('keydown',function(e){
-  
-//   console.log(e.key);
-//   if(e.key=='ArrowUp')
-//   {
-//     console.log("ARrow is up");
-//   }
-//   if(e.key=='ArrowDown')
-//   {
-//     console.log("arrow is down");
-//   }
-// })
+// window.addEventListener('click',function(){})
