@@ -100,14 +100,22 @@ class App {
   }
   _likebutton()
   {
-    let check=2;
+    let checkarr=[2,2,2,2];
+    // let check=2;
 let song=document.querySelector('.Hadjust');
 const heart=document.querySelectorAll('.heart');
 heart.forEach(element => {
-  element.addEventListener('click',function(){
-    console.log("Is this clicked");
-    element.src=`/Asset/Icons/heart(${check}).png`;
-    check=check===2?1:2;
+  element.addEventListener('dblclick',function(e){
+   let search=e.target.closest('section');
+   let curr=search.dataset.number;
+    element.src=`/Asset/Icons/heart(${checkarr[curr]}).png`;
+    if(checkarr[curr]===2)
+    {
+      checkarr[curr]=1;
+    }
+    else{
+      checkarr[curr]=2;
+    }
     })
   });
 }
@@ -117,10 +125,10 @@ heart.forEach(element => {
     // InstPage.innerHTML='';
     let InstPageinside=document.querySelector('.nextpart');
     InstPageinside.innerHTML='';
-    instagramFiltersContent.forEach((data)=>{
+    instagramFiltersContent.forEach((data,i)=>{
       console.log(data);
       let html=`
-  <section class="actualContent">
+  <section data-number="${i}" class="actualContent">
     <div class="videoContainer">
       <div class="topVideoSection">
         <img class="InstIcon" src="/Asset/Icons/back.png" alt="">
