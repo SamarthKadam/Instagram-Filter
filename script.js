@@ -82,6 +82,7 @@ class App {
   _shifttoPage()
   {
     document.querySelector('body').style.overflow='auto';
+    this._setupInstagramPage();
     ReelSection.classList.add('translatex');
    setTimeout(() => {
      console.log(tracks);
@@ -91,7 +92,7 @@ class App {
       ReelSection.style.display='none';
       InstPage.classList.remove('hidden');
       InstPage.style.display='initial';
-      this._setupInstagramPage();
+      // this._setupInstagramPage();
       let backbutton=document.querySelector('.InstIcon');
       backbutton.addEventListener('click',this._shiftBack.bind(this));
       this._likebutton();
@@ -101,13 +102,14 @@ class App {
   {
     let check=2;
 let song=document.querySelector('.Hadjust');
-const heart=document.querySelector('.heart');
-heart.addEventListener('click',function(){
-  console.log("Is this clicked");
-  heart.src=`/Asset/Icons/heart(${check}).png`;
-  console.log(heart)
-  check=check===2?1:2;
-  })
+const heart=document.querySelectorAll('.heart');
+heart.forEach(element => {
+  element.addEventListener('click',function(){
+    console.log("Is this clicked");
+    element.src=`/Asset/Icons/heart(${check}).png`;
+    check=check===2?1:2;
+    })
+  });
 }
 
   _setupInstagramPage()
