@@ -53,6 +53,7 @@ let linearGrad = [
 
 class App {
   timerfilter;
+  history;
   constructor() {
     this._getReuqestfromMedia(0);
     iconflip.addEventListener("click", this._CamNot);
@@ -96,8 +97,16 @@ class App {
       let backbutton=document.querySelector('.InstIcon');
       backbutton.addEventListener('click',this._shiftBack.bind(this));
       this._likebutton();
+      this._WhichClicked();
+      this._VideoToBeloaded();
     }, 1000);
   }
+
+  _WhichClicked()
+  {
+
+  }
+
   _likebutton()
   {
     let checkarr=[2,2,2,2];
@@ -126,9 +135,8 @@ heart.forEach(element => {
     let InstPageinside=document.querySelector('.nextpart');
     InstPageinside.innerHTML='';
     instagramFiltersContent.forEach((data,i)=>{
-      console.log(data);
       let html=`
-  <section data-number="${i}" class="actualContent">
+  <section data-number="${i}" class="actualContent InstCont${i+1}">
     <div class="videoContainer">
       <div class="topVideoSection">
         <img class="InstIcon" src="/Asset/Icons/back.png" alt="">
@@ -150,7 +158,7 @@ heart.forEach(element => {
           <img class="SepAdjust" src="/Asset/Icons/three-dots.png" alt="">
         </div>
       </div>
-      <video   loop class="Hadjust">
+      <video loop class="Hadjust Video${i+1}">
       <source  type="video/mp4" src="${data.link}">
       </video>
       <div class="videoDetails">
@@ -171,6 +179,34 @@ heart.forEach(element => {
   InstPageinside.insertAdjacentHTML('beforeend',html);
     })
 
+  }
+  _VideoToBeloaded()
+  {
+const obsoptions={
+  root:null,
+  threshold:[.8]
+}
+const obscallback=function(entries)
+{
+  const [mediaObj]=entries;
+  console.log(mediaObj);
+  const videoToPlay=mediaObj.target.querySelector('.Hadjust');
+  console.log(videoToPlay);
+  // console.log(mediaObj);
+  if(mediaObj.isIntersecting)
+  {
+  videoToPlay.play();
+  }
+  else{
+    videoToPlay.pause();
+  }
+}
+let video=document.querySelector('.Video1');
+const select=document.querySelectorAll('section');
+const observer=new IntersectionObserver(obscallback,obsoptions);
+select.forEach((data)=>{
+  observer.observe(data);
+})
   }
 
   _CamNot() {
@@ -198,7 +234,7 @@ heart.forEach(element => {
       alt=""
     /><span class="ReelAnswer">North Korea</span>
   </div>`,
- `<div class="question-die-reel">This filter tells what age you will die</div>
+ `<div class="question-die-reel">🆃🅷🅸🆂 🅵🅸🅻🆃🅴🆁🆂 🆃🅴🅻🅻🆂 🆆🅷🅰🆃 🅰🅶🅴 🆈🅾🆄 🆆🅸🅻🅻 🅳🅸🅴</div>
   <div class="answer-die-reel">6</div>`,
   ` <div class="quetion-reel-3">
   What emoji are you
@@ -348,16 +384,3 @@ heart.forEach(element => {
 }
 
 const Insta = new App();
-
-// let check=2;
-// let song=document.querySelector('.Hadjust');
-// const heart=document.querySelector('.heart');
-// heart.addEventListener('click',function(){
-//   console.log("Is this clicked");
-//   heart.src=`/Asset/Icons/heart(${check}).png`;
-//   console.log(heart)
-//   check=check===2?1:2;
-// })
-
-
-// window.addEventListener('click',function(){})
