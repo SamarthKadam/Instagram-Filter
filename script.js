@@ -88,7 +88,6 @@ class App {
     this._setupInstagramPage();
     ReelSection.classList.add("translatex");
     setTimeout(() => {
-      console.log(tracks);
       tracks[0].stop();
       // ReelSection.classList.add('hidden');
       ReelSection.classList.remove("translatex");
@@ -178,9 +177,7 @@ class App {
     };
     const obscallback = function (entries) {
       const [mediaObj] = entries;
-      console.log(mediaObj);
       const videoToPlay = mediaObj.target.querySelector(".Hadjust");
-      console.log(videoToPlay);
       // console.log(mediaObj);
       if (mediaObj.isIntersecting) {
         videoToPlay.play();
