@@ -97,14 +97,8 @@ class App {
       let backbutton=document.querySelector('.InstIcon');
       backbutton.addEventListener('click',this._shiftBack.bind(this));
       this._likebutton();
-      this._WhichClicked();
       this._VideoToBeloaded();
     }, 1000);
-  }
-
-  _WhichClicked()
-  {
-
   }
 
   _likebutton()
