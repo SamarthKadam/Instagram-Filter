@@ -150,6 +150,7 @@ body{
 }
 .Instagram-Page-Header{
     height: 10%;
+    position: relative;
     padding: .5em 0em;
     display: flex;
     justify-content: center;
@@ -372,4 +373,13 @@ body{
     to{
         left: -75%;
     }
+}
+.BackToReelImg{
+    height: 30px;
+}
+.BackToReel{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
 }
