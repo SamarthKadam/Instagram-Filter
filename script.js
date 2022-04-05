@@ -69,7 +69,7 @@ class App {
   _shiftBack() {
     document.querySelector("body").style.overflow = "hidden";
     let up = document.querySelector(".Instagram-Page-Header");
-    let down = document.querySelector(".actualContent");
+    let down = document.querySelector(".nextpart");
     up.classList.add("newtranslate");
     down.classList.add("newtranslate");
     this._getReuqestfromMedia(1);
@@ -221,7 +221,7 @@ class App {
   <div class="answer-die-reel">6</div>`,
       ` <div class="quetion-reel-3">
   What emoji are you
-  <img src="/Asset/emojis/emoji-10.png" class="emoji-Adjust Emoji" alt="">
+  <div class="Emoji emoji-Adjust">&#128512;</div>
   <div class="indicatediv"></div>
 </div>`,
     ];
@@ -296,15 +296,18 @@ class App {
     if (val == 3) {
       let count = 0;
       let images = 16;
+      let emojilist=['&#128513;','&#128514;','&#128517;','&#128518','&#128519;','&#128520','&#128524;','&#128525','&#128526','	&#128529','&#129324;','&#129314;','&#129316','&#129297','&#128564;','&#128552;','	&#128561;','&#129299;','	&#128549;'];
       this._insertInsideElement(filters[val - 1], PFilters);
       let emojiimg = document.querySelector(".Emoji");
       FilterCover.classList.remove("hidden");
       this.timerfilter = setInterval(() => {
-        emojiimg.src = `/Asset/emojis/emoji-${(count + 1) % images}.png`;
+        // emojiimg.src = `/Asset/emojis/emoji-${(count + 1) % images}.png`;
+        emojiimg.innerHTML=emojilist[count%19];
         count++;
         if (count === 80) {
-          let mathrandom = Math.ceil(Math.random() * 16);
-          emojiimg.src = `/Asset/emojis/emoji-${mathrandom - 1}.png`;
+          let mathrandom = Math.ceil(Math.random() * 19);
+          emojiimg.innerHTML=emojilist[mathrandom];
+          // emojiimg.innerHTML='&#128512;';
           clearInterval(this.timerfilter);
         }
       }, 100);

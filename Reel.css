@@ -6,11 +6,11 @@
     align-items: center;
 }
 #videoPlayer{
-    height: 38em;
+    height: 100vh;
 }
 .Videopage{
     position: relative;
-    height: 38em;
+    height: 100vh;
 }
 .leftblock{
     position: absolute;

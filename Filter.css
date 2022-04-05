@@ -100,7 +100,9 @@
       color: #FF7A1F;
   }
   .answer-die-reel{
-      color: #8BD0EF;
+      /* color: #8BD0EF; */
+      color: white;
+      font-weight: 600;
       font-size: 60px;
   }
   .quetion-reel-3{
@@ -132,7 +134,5 @@
 
   }
   .emoji-Adjust{
-      height: 3em;
-      width: 3em;
-      margin-top: .2em;
+      font-size: 80px;
   }
