@@ -305,6 +305,7 @@ class App {
         if (count === 80) {
           let mathrandom = Math.ceil(Math.random() * 16);
           emojiimg.src = `/Asset/emojis/emoji-${mathrandom - 1}.png`;
+          // emojiimg.innerHTML='&#128512;';
           clearInterval(this.timerfilter);
         }
       }, 100);

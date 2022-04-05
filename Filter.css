@@ -100,7 +100,9 @@
       color: #FF7A1F;
   }
   .answer-die-reel{
-      color: #8BD0EF;
+      /* color: #8BD0EF; */
+      color: white;
+      font-weight: 600;
       font-size: 60px;
   }
   .quetion-reel-3{
