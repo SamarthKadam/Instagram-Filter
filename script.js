@@ -69,7 +69,7 @@ class App {
   _shiftBack() {
     document.querySelector("body").style.overflow = "hidden";
     let up = document.querySelector(".Instagram-Page-Header");
-    let down = document.querySelector(".actualContent");
+    let down = document.querySelector(".nextpart");
     up.classList.add("newtranslate");
     down.classList.add("newtranslate");
     this._getReuqestfromMedia(1);
