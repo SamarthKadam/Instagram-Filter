@@ -134,7 +134,5 @@
 
   }
   .emoji-Adjust{
-      height: 3em;
-      width: 3em;
-      margin-top: .2em;
+      font-size: 80px;
   }
