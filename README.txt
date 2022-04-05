@@ -2,6 +2,8 @@ Hello Guys,
 This is My  Project Instagram  Mini Which is built using Javascript and Frontend Technologies. I've used Object-oriented
 programming to build it.
 
+Note:Please Open this App only in Desktop as it is made considering  Desktop only.
+
 Instruction to Use:
 *Firstly Allow Camera Permission Then you are good to go.
 
