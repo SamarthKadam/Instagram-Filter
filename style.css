@@ -22,10 +22,11 @@ body{
     align-items: center;
 }
 .logo-png{
-    width: 11em;
+    /* width: 11em; */
+    width: 176px;
 }
 .logotext-png{
-    width: 12em;
+    width: 192px;
 }
 
 .transition{
@@ -89,7 +90,7 @@ body{
     align-items: center;
 }
 .adjusticon{
-    height: 2.2em;
+    height: 35.2px;
 }
 /* @media (max-width:440px) 
 {
@@ -171,10 +172,10 @@ body{
     width: 7.5em;
 }
 .inputtext{
-    height: 2em;
+    height: 32px;
     width: 120%;
     background-color: #EFEFEF;
-    border-radius: .5em;
+    border-radius: 8px;
     border: 0px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 5px 5px 5px 35px;
@@ -196,7 +197,7 @@ body{
     align-items: center;
 }
 .iconadjust{
-    height: 1.8em;
+    height: 28.8px;
     cursor: pointer;
 }
 .sendParent,.homParent{
@@ -204,8 +205,8 @@ body{
 }
 .message{
     background-color: #ED4956;
-    height: 1.3em;
-    width: 1.3em;
+    height: 20.8px;
+    width: 20.8px;
     position: absolute;
     top: -25%;
     color: whitesmoke;
@@ -221,8 +222,8 @@ body{
     top: 100%;
     left: 47%;
     background-color: #ED4956;
-    height: .3em;
-    width: .3em;
+    height: 4.8px;
+    width: 4.8px;
     border-radius: 50%;
 }
 .actualContent{
@@ -244,7 +245,7 @@ body{
     width: 100%;
     box-sizing: border-box;
     z-index: 100;
-    padding: .5em .5em;
+    padding: 8px 8px;
     display: flex;
     background-color: rgba(0, 0, 0, 0.055);
     align-items: center;
@@ -263,7 +264,7 @@ body{
     font-size: 22px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
-    margin-left: 1em;
+    margin-left: 16px;
     font-weight: 600;
 }
 .feedbacksystem{
@@ -271,17 +272,17 @@ body{
     top: 65%;
     left: 87%;
     display: flex;
-    gap: .8em;
+    gap: 12.8px;
     flex-flow: column;
 }
 .feedbackAdjust{
     position: relative;
     z-index: 100;
-    height: 1.6em;
-    width: 1.6em;
+    height: 25.6px;
+    width: 25.6px;
 }
 .SepAdjust{
-    height: 2em;
+    height: 32px;
 }
 .likes,.comments,.send,.moreoption{
     display: flex;
@@ -289,7 +290,7 @@ body{
 }
 .numberRep{
     color: white;
-    margin-top: .1em;
+    margin-top: 1.6px;
     font-size: 14px;
     font-weight: 400;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -298,13 +299,13 @@ body{
     position: absolute;
     top: 97%;
     height: 14%;
-    padding-left: 1em;
+    padding-left: 16px;
     width: 80%;
     transform: translateY(-97%);
     /* background-color: blueviolet; */
     display: flex;
     flex-flow: column;
-    gap: .5em;
+    gap: 8px;
 }
 .topDetailing,.middleDetailing,.bottomdetailing{
     display: flex;
@@ -314,8 +315,8 @@ body{
     align-items: center;
 }
 .pictitle{
-    height: 1.8em;
-    width: 1.8em;
+    height: 28.8px;
+    width: 28.8px;
     background-color: grey;
     border-radius: 50%;
 }
@@ -326,14 +327,14 @@ body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .titleVideo{
-    margin-left: .4em;
+    margin-left: 6.4px;
 }
 .followbutton{
-    margin-left: .4em;
-    padding: .2em .2em;
+    margin-left: 6.4px;
+    padding: 3.2px 3.2px;
     box-sizing: border-box;
     border: solid 1px whitesmoke;
-    border-radius: .2em;
+    border-radius: 3.2px;
     /* font-weight: 600; */
 }
 .middleDetailing{
@@ -342,14 +343,14 @@ body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .Musical-Note{
-    height: .7em;
-    width: .7em;
+    height: 11.2px;
+    width: 11.2px;
 }
 .Song-Name{
     font-size: 13px;
-    margin-left: .4em;
-    width: 14em;
-    height: 1.3em;
+    margin-left: 6.4px;
+    width: 224px;
+    height: 20.8px;
     color: whitesmoke;
     overflow: hidden;
     position: relative;
